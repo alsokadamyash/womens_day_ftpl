@@ -1,0 +1,13 @@
+{
+    "venue": {
+        "title": "Restaurant",
+        "gps": "https://maps.google.com"
+    },
+    "test": {
+        "title": "Health Test",
+        "gps": "https://google.com"
+    },
+    "video":{
+        "link": "https://youtube.com"
+    }
+}

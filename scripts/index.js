@@ -7,3 +7,16 @@ function getParams() {
 const le_name = getParams();
 
 le_name?document.getElementById("greeting").innerHTML = "Happy Women's Day "+ le_name:null;
+
+fetch('scripts/data.json')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+      // Set the href attribute for the anchor tag
+      document.getElementById('venue').href = data.venue.gps;
+      document.getElementById('venue').innerText = data.venue.title;
+      document.getElementById('test').href = data.test.gps;
+      document.getElementById('test').innerText = data.test.title;
+      document.getElementById('video').href = data.video.link;
+    })
+    .catch(error => console.error('Error fetching JSON:', error));
