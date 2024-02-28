@@ -20,6 +20,21 @@
     --font-serif: "Ultra", serif;
 }
 
+$light-pink: #e4cfdd;
+$light-violet: #a59ae0;
+
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
 // Styles
 
 h1, h2, h3, h4, h5, h6, p{
@@ -70,7 +85,8 @@ a{
     font-weight: 400;
     &:hover{
         text-decoration: underline;
-        font-style: italic;
+        // font-style: italic;
+        font-family: var(--font-serif);
     }
     &:visited{
         color: var(--fab-red);
@@ -87,7 +103,11 @@ body{
       background: var(--fab-silver);
     }
     &.pink{
-      background: var(--womens-day-tint);  
+    //   background: var(--womens-day-tint); 
+        background: linear-gradient(45deg, $light-pink, $light-violet);
+        filter: url(#grainy);
+        background-size: 400% 400%;
+        animation: gradient-animation 6s ease infinite; 
     }
 }
 
@@ -114,7 +134,53 @@ ul{
     }
 }
 
-#greeting{
+svg.noise[height='0'] { position: fixed }
+
+.greeting{
     text-align: center;
     word-break: keep-all;
+    transition: all 200ms ease;
+    &:hover{
+        transform: scale(1.1);
+    }
+    span.le{
+        cursor: pointer;
+        transition: all 200ms ease;
+        &:hover{
+            background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); /* Golden gradient */
+            -webkit-background-clip: text; /* Clip text to the background */
+            background-clip: text;
+            color: transparent;
+        }
+    }
+}
+
+svg.logo{
+    width: 10%;
+}
+
+a#video{
+    cursor: help;
+}
+
+// somre responsive code
+
+// mobile 
+
+@media screen and (max-width: 780px){
+    svg.logo{
+        width: 50%;
+    }
+    iframe#videoplayer{
+        width: 90%;
+    }
+}
+
+
+//tablets & smaller desktops
+
+@media screen and (min-width: 780px) and (max-width:  1100px){
+    svg.logo{
+        width: 30%;
+    }
 }

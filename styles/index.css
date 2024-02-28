@@ -16,6 +16,17 @@
   --font-serif: "Ultra", serif;
 }
 
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 h1.serif, h2.serif, h3.serif, h4.serif, h5.serif, h6.serif, p.serif {
   font-family: var(--font-serif);
   margin-block-start: 0;
@@ -63,7 +74,7 @@ a {
 }
 a:hover {
   text-decoration: underline;
-  font-style: italic;
+  font-family: var(--font-serif);
 }
 a:visited {
   color: var(--fab-red);
@@ -78,7 +89,10 @@ body.light {
   background: var(--fab-silver);
 }
 body.pink {
-  background: var(--womens-day-tint);
+  background: linear-gradient(45deg, #e4cfdd, #a59ae0);
+  filter: url(#grainy);
+  background-size: 400% 400%;
+  animation: gradient-animation 6s ease infinite;
 }
 
 section {
@@ -104,7 +118,47 @@ ul li h3 {
   margin-block-end: 10px;
 }
 
-#greeting {
+svg.noise[height="0"] {
+  position: fixed;
+}
+
+.greeting {
   text-align: center;
   word-break: keep-all;
+  transition: all 200ms ease;
+}
+.greeting:hover {
+  transform: scale(1.1);
+}
+.greeting span.le {
+  cursor: pointer;
+  transition: all 200ms ease;
+}
+.greeting span.le:hover {
+  background: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgb(253, 29, 29) 50%, rgb(252, 176, 69) 100%); /* Golden gradient */
+  -webkit-background-clip: text; /* Clip text to the background */
+  background-clip: text;
+  color: transparent;
+}
+
+svg.logo {
+  width: 10%;
+}
+
+a#video {
+  cursor: help;
+}
+
+@media screen and (max-width: 780px) {
+  svg.logo {
+    width: 50%;
+  }
+  iframe#videoplayer {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 780px) and (max-width: 1100px) {
+  svg.logo {
+    width: 30%;
+  }
 }/*# sourceMappingURL=index.css.map */

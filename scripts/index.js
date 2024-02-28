@@ -6,7 +6,7 @@ function getParams() {
 
 const le_name = getParams();
 
-le_name?document.getElementById("greeting").innerHTML = "Happy Women's Day "+ le_name:null;
+le_name?document.getElementById("greeting").innerHTML = le_name:null;
 
 fetch('scripts/data.json')
     .then(response => response.json())
@@ -18,5 +18,6 @@ fetch('scripts/data.json')
       document.getElementById('test').href = data.test.gps;
       document.getElementById('test').innerText = data.test.title;
       document.getElementById('video').href = data.video.link;
+      // document.getElementById('videoplayer').src = data.video.link;
     })
     .catch(error => console.error('Error fetching JSON:', error));
