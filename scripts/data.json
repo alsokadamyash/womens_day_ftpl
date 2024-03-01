@@ -1,11 +1,11 @@
 {
     "venue": {
-        "title": "Restaurant",
-        "gps": "https://maps.google.com"
+        "title": "Pappilon Park",
+        "gps": "https://g.co/kgs/wKVdSqr"
     },
     "test": {
-        "title": "Health Test",
-        "gps": "https://google.com"
+        "title": "CBC and Diabetes",
+        "url": "https://www.cdc.gov/diabetes/basics/getting-tested.html"
     },
     "video":{
         "link": "https://youtu.be/0PzWnljCpL0?si=kUvwXYfNBUH4sXPe"
