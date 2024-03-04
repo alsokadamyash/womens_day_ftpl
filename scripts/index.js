@@ -11,8 +11,9 @@ le_name?document.getElementById("greeting").innerHTML = le_name:null;
 fetch('scripts/data.json')
     .then(response => response.json())
     .then(data => {
-        console.log(data);
       // Set the href attribute for the anchor tag
+      le_name?document.getElementById("meta").content = "Hello "+le_name:null+"! "+data.meta.greeting;
+      document.getElementById('venue').href = data.venue.gps;
       document.getElementById('venue').href = data.venue.gps;
       document.getElementById('venue').innerText = data.venue.title;
       document.getElementById('restaurant').innerText = data.venue.title2;
