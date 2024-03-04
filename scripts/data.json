@@ -10,7 +10,8 @@
     },
     "video":{
         "link": "https://www.youtube.com/watch?v=2ZerAqz6Xh4",
-        "src": "https://www.youtube.com/embed/2ZerAqz6Xh4?si=BwQvOhM9E-rWEdoB"
+        "src": "https://www.youtube.com/embed/2ZerAqz6Xh4?si=BwQvOhM9E-rWEdoB",
+        "local": "assets/International_Womens_Day_Pocket_Passport.mp4"
     },
     "meta": {
         "greeting": "Fabtech wishes a joyous and empowering Womens Day! Have a look at this webpage for your greeting and the schedule for the day."

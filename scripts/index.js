@@ -21,6 +21,7 @@ fetch('scripts/data.json')
       document.getElementById('test').innerText = data.test.title;
       document.getElementById('video').href = data.video.link;
       document.getElementById('videoplayer').src = data.video.src;
+      document.getElementById('localvideoplayer').src = data.video.local;
       // document.getElementById('videoplayer').src = data.video.link;
     })
     .catch(error => console.error('Error fetching JSON:', error));
