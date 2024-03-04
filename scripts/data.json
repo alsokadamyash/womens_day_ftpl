@@ -1,11 +1,12 @@
 {
     "venue": {
-        "title": "Pappilon Park",
+        "title": "Papillon Restaurant (Opp. Star Bazaar)",
+        "title2": "@Papillon Restaurant",
         "gps": "https://maps.app.goo.gl/oez5aiqnJoLB8CLA6"
     },
     "test": {
-        "title": "CBC and RBS",
-        "url": "https://www.cdc.gov/diabetes/basics/getting-tested.html"
+        "title": "Blood Test : CBC & RBS",
+        "url": "/blood-test"
     },
     "video":{
         "link": "https://youtu.be/0PzWnljCpL0?si=kUvwXYfNBUH4sXPe"

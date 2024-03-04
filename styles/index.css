@@ -74,7 +74,7 @@ a {
 }
 a:hover {
   text-decoration: underline;
-  font-family: var(--font-serif);
+  font-style: italic;
 }
 a:visited {
   color: var(--fab-red);
@@ -149,6 +149,38 @@ a#video {
   cursor: help;
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+}
+.row .location, .row .date {
+  display: flex;
+  align-items: center;
+}
+
+.paragraph {
+  width: 50%;
+  word-break: normal;
+  text-align: center;
+}
+
+.back {
+  transform: scale(0.5);
+}
+.back svg {
+  transform: rotate(0);
+  transition: all 100ms ease;
+}
+.back:hover {
+  text-decoration: none;
+  transform: scale(0.5);
+}
+.back:hover svg {
+  transform: rotate(-20deg);
+}
+
 @media screen and (max-width: 780px) {
   svg.logo {
     width: 50%;
@@ -156,9 +188,23 @@ a#video {
   iframe#videoplayer {
     width: 90%;
   }
+  .paragraph {
+    width: 90%;
+  }
+  .row {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .row h3 {
+    font-size: 100%;
+    margin: 0;
+  }
 }
 @media screen and (min-width: 780px) and (max-width: 1100px) {
   svg.logo {
     width: 30%;
+  }
+  .paragraph {
+    width: 80%;
   }
 }/*# sourceMappingURL=index.css.map */

@@ -15,6 +15,7 @@ fetch('scripts/data.json')
       // Set the href attribute for the anchor tag
       document.getElementById('venue').href = data.venue.gps;
       document.getElementById('venue').innerText = data.venue.title;
+      document.getElementById('restaurant').innerText = data.venue.title2;
       document.getElementById('test').href = data.test.url;
       document.getElementById('test').innerText = data.test.title;
       document.getElementById('video').href = data.video.link;
