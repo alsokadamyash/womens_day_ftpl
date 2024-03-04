@@ -12,7 +12,7 @@ fetch('scripts/data.json')
     .then(response => response.json())
     .then(data => {
       // Set the href attribute for the anchor tag
-      le_name?document.getElementById("meta").content = "Hello "+le_name:null+"! "+data.meta.greeting;
+      le_name?document.getElementById("meta").setAttribute("content", "Hello "+le_name+"! "+data.meta.greeting):null;
       document.getElementById('venue').href = data.venue.gps;
       document.getElementById('venue').href = data.venue.gps;
       document.getElementById('venue').innerText = data.venue.title;
