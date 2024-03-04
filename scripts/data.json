@@ -9,7 +9,8 @@
         "url": "/blood-test"
     },
     "video":{
-        "link": "https://www.youtube.com/watch?v=2ZerAqz6Xh4"
+        "link": "https://www.youtube.com/watch?v=2ZerAqz6Xh4",
+        "src": "https://www.youtube.com/embed/2ZerAqz6Xh4?si=BwQvOhM9E-rWEdoB"
     },
     "meta": {
         "greeting": "Fabtech wishes a joyous and empowering Womens Day! Have a look at this webpage for your greeting and the schedule for the day."

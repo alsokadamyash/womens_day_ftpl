@@ -20,6 +20,7 @@ fetch('scripts/data.json')
       document.getElementById('test').href = data.test.url;
       document.getElementById('test').innerText = data.test.title;
       document.getElementById('video').href = data.video.link;
+      document.getElementById('videoplayer').src = data.video.src;
       // document.getElementById('videoplayer').src = data.video.link;
     })
     .catch(error => console.error('Error fetching JSON:', error));
